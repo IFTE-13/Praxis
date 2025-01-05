@@ -17,22 +17,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(
+          'min-h-screen font-sans antialiased',
+          inter.className
+        )}>
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
-            disableTransitionOnChange
-          >
-            <body
-              className={cn(
-                'min-h-screen font-sans antialiased',
-                inter.className
-              )}
+            disableTransitionOnChange 
             >
               {children}
-            </body>
-      </ThemeProvider>
+          </ThemeProvider>
+     </body>
     </html>
   );
 }
