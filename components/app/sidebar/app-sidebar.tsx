@@ -5,9 +5,9 @@ import {
   BookCheck,
   BookOpenCheck,
   CircleUser,
-  Command,
   Contact,
   FileUser,
+  GraduationCap,
   Home,
   MicVocal,
   NotepadText,
@@ -30,6 +30,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
 const data = {
   user: {
@@ -52,12 +53,12 @@ const data = {
   navMenu: [
     {
       name: "Home",
-      url: "#",
+      url: "/",
       icon: Home,
     },
     {
       name: "Teachers",
-      url: "#",
+      url: "/teachers",
       icon: FileUser,
     },
     {
@@ -115,15 +116,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <a href="#">
+              <Link href="/">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
+                  <GraduationCap className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">Praxis</span>
                   <span className="truncate text-xs">University</span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

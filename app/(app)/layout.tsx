@@ -1,4 +1,4 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app/sidebar/app-sidebar"
 import { cookies } from "next/headers";
 import { Navbar } from "@/components/app/Navbar/navbar";
@@ -13,10 +13,10 @@ export default async  function AppLayout({
     return (
       <SidebarProvider defaultOpen={defaultOpen}>
         <AppSidebar />
-        <Navbar/>
-        <main>
+        <SidebarInset>
+          <Navbar/>
           {children}
-        </main>
+        </SidebarInset>
       </SidebarProvider>
     );
   }
