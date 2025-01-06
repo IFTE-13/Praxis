@@ -3,7 +3,7 @@ import { dashboardStatsData } from '@/data/statsData';
 
 export default function StatsCard() {
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4 col-span-1 md:col-span-2 lg:col-span-2 m-2">
+    <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
         {dashboardStatsData.map((card, index) => {
             const Icon = card.icon;
             return (
