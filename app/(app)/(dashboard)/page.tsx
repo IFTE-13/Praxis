@@ -1,4 +1,6 @@
+import { Announcements } from "@/components/app/dashborad/announcement"
 import { CalendarSection } from "@/components/app/dashborad/calendar"
+import { Events } from "@/components/app/dashborad/events"
 import StatsCard from "@/components/app/dashborad/stats"
 import { FinanceChart } from "@/components/charts/finance-chart"
 import { StudentAttendanceChart } from "@/components/charts/student-attendence-chart"
@@ -22,8 +24,10 @@ export default function page() {
           <FinanceChart/>
         </div>
       </div>
-      <div className="col-span-1">
+      <div className="col-span-1 space-y-4 mx-4 md:mx-0 lg:mx-0">
         <CalendarSection />
+        <Events />
+        <Announcements />
       </div>
     </div>
     </div>

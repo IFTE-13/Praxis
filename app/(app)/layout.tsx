@@ -1,4 +1,4 @@
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app/sidebar/app-sidebar"
 import { cookies } from "next/headers";
 import { Navbar } from "@/components/app/Navbar/navbar";

@@ -1,13 +1,10 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
-import { LabelList, Pie, PieChart, PolarGrid, RadialBar, RadialBarChart } from "recharts"
+import {  Pie, PieChart } from "recharts"
 
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -16,8 +13,6 @@ import {
   ChartContainer,
   ChartLegend,
   ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
 } from "@/components/ui/chart"
 
 const chartData = [
