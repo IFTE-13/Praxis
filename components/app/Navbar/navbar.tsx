@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Search } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -38,11 +38,9 @@ export const Navbar = () => {
         </Breadcrumb>
       </div>
 
-      <div className="ml-auto flex items-center">
-        <SearchForm className="hidden sm:block" />
-        <button className="sm:hidden p-2">
-          <Search className="w-5 h-5" />
-        </button>
+      <div className="ml-auto flex items-center space-x-2">
+        <ModeToggle />
+        <SearchForm />
       </div>
     </header>
   );
